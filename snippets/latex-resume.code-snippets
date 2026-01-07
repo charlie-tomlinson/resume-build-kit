@@ -1,0 +1,123 @@
+{
+  "Resume Header": {
+    "scope": "latex",
+    "prefix": "resheader",
+    "body": [
+      "\\header{",
+      "  \\\\name{${1:Your Name}}",
+      "  \\\\contactinfo{",
+      "    \\\\contact{${2:email}}",
+      "    \\\\contact{${3:phone}}",
+      "  }",
+      "}"
+    ],
+    "description": "Resume header block"
+  },
+
+  "Resume Section": {
+    "scope": "latex",
+    "prefix": "ressection",
+    "body": [
+      "\\section{${1:Section Title}}"
+    ],
+    "description": "Resume section heading"
+  },
+
+  "Resume Entry": {
+    "scope": "latex",
+    "prefix": "resentry",
+    "body": [
+      "\\entry{",
+      "  ${1}",
+      "}"
+    ],
+    "description": "Generic resume entry wrapper"
+  },
+
+  "Company Entry": {
+    "scope": "latex",
+    "prefix": "company",
+    "body": [
+      "\\company{${1:Company Name}}{${2:Team or Product}}",
+      "\\location{${3:City}}{${4:Country}}"
+    ],
+    "description": "Company name and location"
+  },
+
+  "School Entry": {
+    "scope": "latex",
+    "prefix": "school",
+    "body": [
+      "\\school{${1:School Name}}{${2:Program}}",
+      "\\location{${3:City}}{${4:Country}}"
+    ],
+    "description": "School name and location"
+  },
+
+  "Role": {
+    "scope": "latex",
+    "prefix": "role",
+    "body": [
+      "\\role{${1:Role Title}}{${2:Team}}"
+    ],
+    "description": "Role title"
+  },
+
+  "Degree": {
+    "scope": "latex",
+    "prefix": "degree",
+    "body": [
+      "\\degree{${1:Degree}}{${2:Field}}"
+    ],
+    "description": "Degree title"
+  },
+
+  "Dates": {
+    "scope": "latex",
+    "prefix": "dates",
+    "body": [
+      "\\dates{${1:Start}}{${2:End}}"
+    ],
+    "description": "Dates line for role or degree"
+  },
+
+  "Highlights Block": {
+    "scope": "latex",
+    "prefix": "highlights",
+    "body": [
+      "\\highlights{",
+      "  \\\\highlight ${1:First achievement}",
+      "}"
+    ],
+    "description": "Highlights list block"
+  },
+
+  "Highlight Item": {
+    "scope": "latex",
+    "prefix": "hl",
+    "body": [
+      "\\highlight ${1:Achievement}"
+    ],
+    "description": "Single highlight item"
+  },
+
+  "Skills Section": {
+    "scope": "latex",
+    "prefix": "skills",
+    "body": [
+      "\\skills{",
+      "  \\\\skillitem{${1:Category}}{${2:Skill list}}",
+      "}"
+    ],
+    "description": "Skills block"
+  },
+
+  "Skill Item": {
+    "scope": "latex",
+    "prefix": "skill",
+    "body": [
+      "\\skillitem{${1:Category}}{${2:Skill list}}"
+    ],
+    "description": "Single skill item"
+  }
+}
