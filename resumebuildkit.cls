@@ -15,6 +15,8 @@
 \newcommand{\sectionfont}{\bfseries\fontsize{11}{11}\selectfont}
 \newcommand{\bodyfont}{\mdseries\fontsize{10.5}{11}\selectfont}
 \newcommand{\cvsep}{\enspace•\enspace}
+\hyphenpenalty=10000 \exhyphenpenalty=10000 \pretolerance=10000
+\raggedright % no hyphenation or stretched lines
 \newif\if@contactcollecting
 \newif\if@contactfirst
 \newcommand{\contact}[1]{%
@@ -53,6 +55,20 @@
 % --- Entry Engine ---
 \newcommand{\roleslist}{} 
 \newlength{\skilllabelwidth}
+\ExplSyntaxOn
+\cs_new_protected:Npn \rbkhighlightformat #1
+  { % normalize highlight text (trim + ensure trailing period)
+    \tl_set:Nn \l_tmpa_tl { #1 }
+    \tl_trim_spaces:N \l_tmpa_tl
+    \tl_if_empty:NF \l_tmpa_tl
+      {
+        \regex_replace_once:nnN { [.!?:;]*\s*\z } { } \l_tmpa_tl
+        \tl_put_right:Nn \l_tmpa_tl { . }
+        \tl_use:N \l_tmpa_tl
+      }
+  }
+\ExplSyntaxOff
+\newcommand{\rbkhighlight}[1]{\item \rbkhighlightformat{#1}}
 
 \NewDocumentCommand{\entry}{+m}{
   \begingroup
@@ -75,7 +91,7 @@
     }
     
     \newcommand{\highlights}[1]{\g@addto@macro\reshighlights{\vspace{2pt}{\bodyfont\begin{itemize}[leftmargin=0.5em, labelwidth=0.4em, labelsep=0.3em, labelindent=0pt, itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt, label=\normalsize•]%
-        \let\highlight\item%
+        \let\highlight\rbkhighlight
         ##1\end{itemize}}}}
 
     #1 % Execute data
