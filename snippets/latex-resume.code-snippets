@@ -1,22 +1,23 @@
 {
   "Resume Header": {
-    "scope": "latex",
-    "prefix": "resheader",
+    "scope": "latex, tex",
+    "prefix": "\\header",
     "body": [
       "\\header{",
-      "  \\\\name{${1:Your Name}}",
-      "  \\\\contactinfo{",
-      "    \\\\contact{${2:email}}",
-      "    \\\\contact{${3:phone}}",
+      "  \\name{${1:Your Name}}",
+      "  \\contactinfo{",
+      "    \\contact{${2:email}}",
+      "    \\contact{${3:phone}}",
       "  }",
-      "}"
+      "}",
+      "$0"
     ],
     "description": "Resume header block"
   },
 
   "Resume Section": {
-    "scope": "latex",
-    "prefix": "ressection",
+    "scope": "latex, tex",
+    "prefix": "\\section",
     "body": [
       "\\section{${1:Section Title}}"
     ],
@@ -24,19 +25,20 @@
   },
 
   "Resume Entry": {
-    "scope": "latex",
-    "prefix": "resentry",
+    "scope": "latex, tex",
+    "prefix": "\\entry",
     "body": [
       "\\entry{",
-      "  ${1}",
-      "}"
+      "  ${1:content}",
+      "}",
+      "$0"
     ],
     "description": "Generic resume entry wrapper"
   },
 
   "Company Entry": {
-    "scope": "latex",
-    "prefix": "company",
+    "scope": "latex, tex",
+    "prefix": "\\company",
     "body": [
       "\\company{${1:Company Name}}{${2:Team or Product}}",
       "\\location{${3:City}}{${4:Country}}"
@@ -45,8 +47,8 @@
   },
 
   "School Entry": {
-    "scope": "latex",
-    "prefix": "school",
+    "scope": "latex, tex",
+    "prefix": "\\school",
     "body": [
       "\\school{${1:School Name}}{${2:Program}}",
       "\\location{${3:City}}{${4:Country}}"
@@ -55,8 +57,8 @@
   },
 
   "Role": {
-    "scope": "latex",
-    "prefix": "role",
+    "scope": "latex, tex",
+    "prefix": "\\role",
     "body": [
       "\\role{${1:Role Title}}{${2:Team}}"
     ],
@@ -64,8 +66,8 @@
   },
 
   "Degree": {
-    "scope": "latex",
-    "prefix": "degree",
+    "scope": "latex, tex",
+    "prefix": "\\degree",
     "body": [
       "\\degree{${1:Degree}}{${2:Field}}"
     ],
@@ -73,8 +75,8 @@
   },
 
   "Dates": {
-    "scope": "latex",
-    "prefix": "dates",
+    "scope": "latex, tex",
+    "prefix": "\\dates",
     "body": [
       "\\dates{${1:Start}}{${2:End}}"
     ],
@@ -82,41 +84,45 @@
   },
 
   "Highlights Block": {
-    "scope": "latex",
-    "prefix": "highlights",
+    "scope": "latex, tex",
+    "prefix": "\\highlights",
     "body": [
       "\\highlights{",
-      "  \\\\highlight ${1:First achievement}",
-      "}"
+      "  \\highlight ${1:First achievement}",
+      "}",
+      "$0"
     ],
     "description": "Highlights list block"
   },
 
   "Highlight Item": {
-    "scope": "latex",
-    "prefix": "hl",
+    "scope": "latex, tex",
+    "prefix": "\\highlight",
     "body": [
-      "\\highlight ${1:Achievement}"
+      "\\highlight ${1:Achievement}",
+      "$0"
     ],
     "description": "Single highlight item"
   },
 
   "Skills Section": {
-    "scope": "latex",
-    "prefix": "skills",
+    "scope": "latex, tex",
+    "prefix": "\\skills",
     "body": [
       "\\skills{",
-      "  \\\\skillitem{${1:Category}}{${2:Skill list}}",
-      "}"
+      "  \\skillitem{${1:Category}}{${2:Skill list}}",
+      "}",
+      "$0"
     ],
     "description": "Skills block"
   },
 
   "Skill Item": {
-    "scope": "latex",
-    "prefix": "skill",
+    "scope": "latex, tex",
+    "prefix": "\\skill",
     "body": [
-      "\\skillitem{${1:Category}}{${2:Skill list}}"
+      "\\skillitem{${1:Category}}{${2:Skill list}}",
+      "$0"
     ],
     "description": "Single skill item"
   }

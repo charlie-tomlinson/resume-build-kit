@@ -1,3 +1,6 @@
 .vscode/
+snippets/
 tests/
 .DS_Store
+variants/
+assets/
