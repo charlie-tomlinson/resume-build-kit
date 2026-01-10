@@ -4,7 +4,7 @@ An opinionated LaTeX resume class and build setup I use to produce clean, reprod
 
 ## Overview
 
-This repository contains a LaTeX resume class along with a small set of editor snippets. The focus is on keeping resume content readable with centralized formatting decisions.
+This repository contains a LaTeX resume class. The focus is on keeping resume content readable with centralized formatting decisions.
 
 The code reflects how I prefer to structure intentionally light, focused tools.
 
